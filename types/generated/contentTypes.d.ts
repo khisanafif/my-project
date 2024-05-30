@@ -971,13 +971,14 @@ export interface ApiTagTag extends Schema.CollectionType {
     singularName: 'tag';
     pluralName: 'tags';
     displayName: 'Tag';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    price: Attribute.Decimal & Attribute.Required;
+    price: Attribute.BigInteger & Attribute.Required;
     product: Attribute.Relation<
       'api::tag.tag',
       'manyToOne',
