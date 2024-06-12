@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "f2ed5461-b128-4f96-9c51-27ceae2aed86",
 		"name": "PustakaLoka",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "35318293"
 	},
 	"item": [
@@ -15,12 +15,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:1337/api/banners?populate=image",
-							"protocol": "http",
+							"raw": "https://efficient-life-0decbcd91b.strapiapp.com/api/banners?populate=image",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"efficient-life-0decbcd91b",
+								"strapiapp",
+								"com"
 							],
-							"port": "1337",
 							"path": [
 								"api",
 								"banners"
@@ -85,12 +86,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:1337/api/popular-products?populate=product,product.images",
-							"protocol": "http",
+							"raw": "https://efficient-life-0decbcd91b.strapiapp.com/api/popular-products?populate=product,product.images",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"efficient-life-0decbcd91b",
+								"strapiapp",
+								"com"
 							],
-							"port": "1337",
 							"path": [
 								"api",
 								"popular-products"
@@ -116,12 +118,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:1337/api/products?populate=images,tags",
-							"protocol": "http",
+							"raw": "https://efficient-life-0decbcd91b.strapiapp.com/api/products?populate=images,tags",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"efficient-life-0decbcd91b",
+								"strapiapp",
+								"com"
 							],
-							"port": "1337",
 							"path": [
 								"api",
 								"products"
@@ -142,12 +145,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:1337/api/products?populate=images,tags&filters[name][$contains]=$keyword",
-							"protocol": "http",
+							"raw": "https://efficient-life-0decbcd91b.strapiapp.com/api/products?populate=images,tags&filters[name][$contains]=$keyword",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"efficient-life-0decbcd91b",
+								"strapiapp",
+								"com"
 							],
-							"port": "1337",
 							"path": [
 								"api",
 								"products"
@@ -177,7 +181,22 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:1337/api/categories?populate=image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "image"
+								}
+							]
 						}
 					},
 					"response": []
@@ -201,20 +220,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:1337/api/auth/local/register",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "1337",
-							"path": [
-								"api",
-								"auth",
-								"local",
-								"register"
-							]
-						}
+						"url": "http://localhost:1337/api/auth/local/register"
 					},
 					"response": []
 				},
@@ -232,19 +238,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:1337/api/auth/local",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "1337",
-							"path": [
-								"api",
-								"auth",
-								"local"
-							]
-						}
+						"url": "http://localhost:1337/api/auth/local"
 					},
 					"response": []
 				},
@@ -253,13 +247,9 @@
 					"request": {
 						"auth": {
 							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjY5MzA3MDg5LCJleHAiOjE2NzE4OTkwODl9.NbexmP9tevVVUzhSg1SyqM4LV7x6-KxVwjYsMV1fggc",
-									"type": "string"
-								}
-							]
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjY5MzA3MDg5LCJleHAiOjE2NzE4OTkwODl9.NbexmP9tevVVUzhSg1SyqM4LV7x6-KxVwjYsMV1fggc"
+							}
 						},
 						"method": "POST",
 						"header": [],
@@ -272,19 +262,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:1337/api/profile/me",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "1337",
-							"path": [
-								"api",
-								"profile",
-								"me"
-							]
-						}
+						"url": "http://localhost:1337/api/profile/me"
 					},
 					"response": []
 				},
@@ -293,19 +271,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:1337/api/profile/me",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "1337",
-							"path": [
-								"api",
-								"profile",
-								"me"
-							]
-						}
+						"url": "http://localhost:1337/api/profile/me"
 					},
 					"response": []
 				}
