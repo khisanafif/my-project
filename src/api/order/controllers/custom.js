@@ -34,7 +34,7 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
             "requestType": "Payment",
             "OBJID": entry.id,
             "mid": process.env.MID,
-            "websiteName": "YOUR_WEBSITE_NAME",
+            "websiteName": "PustakaLoka",
             "orderId": params.orderid,
             "callbackUrl": "https://efficient-life-0decbcd91b.strapiapp.com/api/orders/posttransaction",
             "txnAmount": {
